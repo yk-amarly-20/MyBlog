@@ -1,9 +1,18 @@
-import React from 'react';
+import "./SideMenuTitle.css";
 
-export const SideMenuTitle: React.VFC = () => {
+type Props = {
+  icon: React.ReactNode;
+};
+
+export const SideMenuTitle: React.FC<Props> = (props) => {
   return (
-    <div>
-      <p>About Me</p>
+    <div className="root">
+      <div className="icon">
+        {props.icon}
+      </div>
+      <div className="children">
+        {props.children}
+      </div>
     </div>
-  )
-}
+  );
+};
