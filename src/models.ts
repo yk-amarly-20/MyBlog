@@ -1,10 +1,8 @@
-export type Tag = {
-  name: string;
-};
+
 
 export type FrontMatter = {
   title: string;
-  tags: Tag[];
+  tags: string[];
   createdAt: string;
   updatedAt: string;
   imageUrl: string;
