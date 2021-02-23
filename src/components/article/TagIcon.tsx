@@ -3,10 +3,8 @@ import { faTags } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   className: string;
-}
+};
 
-export const Tag: React.VFC<Props> = (props) => {
-  return (
-    <FontAwesomeIcon className={props.className} icon={faTags} />
-  )
-}
+export const TagIcon: React.VFC<Props> = props => {
+  return <FontAwesomeIcon className={props.className} icon={faTags} />;
+};
