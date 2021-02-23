@@ -1,69 +1,52 @@
 {
-  "name": "yuto_kojima_blog",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "create": "node scripts/createBlogArticle.js",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+  },
   "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "date-fns": "^2.17.0",
-    "next": "^10.0.7",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.4",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
+    "gray-matter": "^4.0.2",
+    "markdown-toc": "^1.2.0",
+    "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
-    "react-scripts": "4.0.2",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "react-syntax-highlighter": "^15.4.3",
+    "remark": "^13.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-slug": "^6.0.0",
+    "strip-markdown": "^4.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
   "devDependencies": {
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
-    "husky": "^5.0.9",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "@types/classnames": "^2.2.11",
+    "@types/node": "^13.11.0",
+    "@types/react": "^17.0.0",
+    "@types/react-syntax-highlighter": "^13.5.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.2"
   },
-  "author": "",
-  "license": "ISC",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
   }
 }
