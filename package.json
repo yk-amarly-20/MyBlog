@@ -48,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md,jpg,png}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "next.config.js",
