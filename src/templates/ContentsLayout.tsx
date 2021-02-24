@@ -29,6 +29,7 @@ export const ContentsLayout: React.FC<Props> = props => {
           <div className={style.otherMenu}>{props.sidemenu}</div>
         </div>
       </div>
+      {/*<div className={style.contents}>{props.children}</div>*/}
       <button
         className={classnames(
           style.sidemenuOpenButton,
