@@ -32,6 +32,7 @@
     "strip-markdown": "^4.0.0"
   },
   "devDependencies": {
+    "@types/babel__core": "^7.1.12",
     "@types/classnames": "^2.2.11",
     "@types/node": "^13.11.0",
     "@types/react": "^17.0.0",
@@ -47,6 +48,18 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
-  }
+    "*.{js,jsx,ts,tsx,json,css,scss,md,jpg,png}": "prettier --write"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yk-amarly-20/MyBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yk-amarly-20/MyBlog/issues"
+  },
+  "homepage": "https://github.com/yk-amarly-20/MyBlog#readme"
 }
