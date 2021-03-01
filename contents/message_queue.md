@@ -27,3 +27,85 @@ Node.js から RabbitMQ にアクセスできるライブラリは複数あり�
 ```sh
 npm install --save ampqlib
 ```
+
+では、送信側の処理と受信側の処理をそれぞれ実装していきます。
+
+#### 送信側の処理
+
+```tsx
+import * as ampq from "amqplib";
+
+const QUEUE = "message-queue";
+
+function wait(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+(async function main() {
+  const connection = await ampq.connect(
+    "amqp://localhost",
+    function (error: Error, connection: ampq.Connection) {
+      if (error) {
+        throw error;
+      }
+    },
+  );
+
+  const channel = await connection.createChannel();
+  channel.assertQueue(QUEUE);
+  let send_counter = 0;
+
+  while (send_counter < 100) {
+    const message = `Hello ${send_counter}`;
+    channel.sendToQueue(QUEUE, Buffer.from(message));
+    console.log("send ", message);
+    await wait(1500);
+    send_counter++;
+  }
+
+  await channel.close();
+})();
+```
+
+ampqlib では、最初に connect()関数で connection を取得してから createChannel などで
+channel を作成し、channel に実装されたメソッドでクエリを処理します。ここでは channel.sendToQueue メソッドでキューに 100 回メッセージを送信しています。
+
+#### 受信側の実装
+
+```tsx
+import * as ampq from "amqplib";
+
+const QUEUE = "message-queue";
+
+function wait(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+(async function main() {
+  const connection = await ampq.connect(
+    "ampq://localhost",
+    function (error: Error, connection: ampq.Connection) {
+      if (error) {
+        throw error;
+      }
+    },
+  );
+
+  const channel = await connection.createChannel();
+  await channel.prefetch(1);
+  channel.assertQueue(QUEUE);
+
+  await channel.consume(QUEUE, async function (message) {
+    console.log("Receive");
+    await wait(1500);
+    channel.ack(message);
+  });
+});
+```
+
+受信側は、channel.consume()メソッドを用いることで受信宣言をすることができ、キュー内のメッセージを全て受信した後も
+新たなメッセージを随時取得します。
+
+## おわりに
+
+ここで紹介した機能だけだと、様々な要因でシステム障害が発生します。機会があればまたそこについても更新していこうとい思います。
