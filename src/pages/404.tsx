@@ -12,7 +12,7 @@ const Custom404: React.VFC = () => {
           fontSize: "2rem",
         }}>
         <p>404 Not Found</p>
-        <p style={{ marginTop: "2rem" }}>すまん</p>
+        <p style={{ marginTop: "2rem" }}>ごめんね、そのURLは存在しないんだ</p>
       </div>
     </>
   );
