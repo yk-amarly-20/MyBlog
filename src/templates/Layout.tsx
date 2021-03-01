@@ -14,7 +14,7 @@ export const Layout: React.FC = props => {
           <div className={style.eyeCatchContainer}>
             <img
               className={style.eyeCatch}
-              src="/Images/page_top_test.jpg"
+              src="/Images/free_horizontal_on_white_by_logaster.png"
               alt="eye catch"
             />
           </div>
