@@ -13,7 +13,7 @@ type Props = {
 const Home: NextPage<Props> = ({ articles, tags }: Props) => {
   return (
     <>
-      <SEO title="TOP" description="すてぃんの技術ブログ" />
+      <SEO title="TOP" description="コジコジ ブログ" />
       <Root articles={articles} tags={tags} />
     </>
   );
