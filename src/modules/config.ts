@@ -1,6 +1,6 @@
 export const config = {
   siteTitle: "kojikoji's blog",
-  siteUrl: "localhost:3000",
+  siteUrl: "",
   social: {
     twitter: "@yk_amarly_20",
   },
