@@ -103,7 +103,15 @@ const mainThemeColors: ThemeColors = {
   primary: "#F2F2F2",
   secondary: "#777777",
   background: "#1C1C1C",
-  accent: "#A47ED8",
+  // これが修正前
+  //accent: "#A47ED8",
+  // ターコイズ
+  // accent: "#00afcc",
+  // ミント
+  // accent: "#89c997",
+  // オパール
+  // accent: "#bee0ce",
+  accent: "#a1d8e6",
   linkText: "#03A9F4",
   inlineCodeBg: "#444444",
   tableBg: "#393939",
