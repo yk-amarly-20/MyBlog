@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { TagsIcon } from "../icon/TagsIcon";
+import { Hashtag } from "../icon/HashTag";
 import style from "../styles/TagsWithIcon.module.css";
+import { Hash } from "crypto";
 
 type Props = {
   tags: string[];
@@ -10,7 +11,7 @@ type Props = {
 export const TagsWithIcon: React.VFC<Props> = ({ tags }) => {
   return (
     <div className={style.root}>
-      <TagsIcon className={style.icon} />
+      <Hashtag className={style.icon} />
       <p className={style.tags}>
         {tags.map((tag, index) => (
           <React.Fragment key={index}>

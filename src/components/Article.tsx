@@ -20,9 +20,7 @@ export const Article: React.VFC<Props> = ({ article }) => {
         <MarkdownRenderer>{article.bodyMdText}</MarkdownRenderer>
       </article>
       <div className={style.articleFooter}>
-        <ExternalLink
-          className={style.githubLink}
-          href={`https://github.com/y-hiraoka/stin-blog`}>
+        <ExternalLink className={style.githubLink} href={`https://github.com/yk-amarly`}>
           <Github className={style.githubIcon} /> 質問、修正リクエストはGitHubまで
         </ExternalLink>
       </div>

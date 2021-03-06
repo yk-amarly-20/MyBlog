@@ -1,13 +1,14 @@
 import style from "../styles/AboutMe.module.css";
 import { ExternalLink } from "../link/ExternalLink";
 import { LinkIcon } from "../icon/LinkIcon";
-import { Info } from "../icon/Info";
+// import { Info } from "../icon/Info";
+import { LeafInfo } from "../icon/LeafInfo";
 import { SideMenuTitle } from "./sideMenu/SideMenuTitle";
 
 export const AboutMe: React.FC = () => {
   return (
     <div>
-      <SideMenuTitle icon={<Info className={style.icon} />}>About Me</SideMenuTitle>
+      <SideMenuTitle icon={<LeafInfo className={style.icon} />}>About Me</SideMenuTitle>
       <div className={style.wrapper}>
         <div className={style.aboutme}>
           <img src="/Images/Me.jpg" className={style.avatar} alt="avatar" />
