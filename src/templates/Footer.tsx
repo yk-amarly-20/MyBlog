@@ -23,7 +23,7 @@ export const Footer: React.VFC = () => {
         </p>
         <p className={style.text}>
           &copy; {copyrightPeriod}{" "}
-          <ExternalLink href="https://twitter.com/stin_factory">
+          <ExternalLink href="https://twitter.com/yk_amarly_20">
             kojikoji <LinkIcon className={style.icon} />
           </ExternalLink>
         </p>

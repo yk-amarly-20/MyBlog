@@ -8,7 +8,7 @@ export const Header: React.VFC = props => {
       <AppContainer className={style.container}>
         <Link href="/">
           <a>
-            <img className={style.logo} src="../Images/logo_test.png" alt="logo" />
+            <img className={style.logo} src="../Images/logo.png" alt="logo" />
           </a>
         </Link>
       </AppContainer>
