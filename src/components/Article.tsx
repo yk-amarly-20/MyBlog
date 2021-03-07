@@ -22,7 +22,7 @@ export const Article: React.VFC<Props> = ({ article }) => {
       <div className={style.articleFooter}>
         <ExternalLink
           className={style.githubLink}
-          href={`https://github.com/y-hiraoka/stin-blog`}>
+          href={`https://github.com/yk-amarly-20`}>
           <Github className={style.githubIcon} /> 質問、修正リクエストはGitHubまで
         </ExternalLink>
       </div>

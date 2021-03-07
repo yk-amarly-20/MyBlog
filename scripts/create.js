@@ -1,5 +1,5 @@
 const fs = require("fs").promises;
-const path = requuire("path");
+const path = require("path");
 
 !(async () => {
   const slug = process.argv[2];
