@@ -12,11 +12,7 @@ export const Layout: React.FC = props => {
       {isHome && (
         <>
           <div className={style.eyeCatchContainer}>
-            <img
-              className={style.eyeCatch}
-              src="/Images/free_horizontal_on_white_by_logaster.png"
-              alt="eye catch"
-            />
+            <img className={style.eyeCatch} src="/Images/kojiblogA.png" alt="eye catch" />
           </div>
           <div className={style.eyeCatchWrapper}>
             <div className={style.scrollDownContainer}>
