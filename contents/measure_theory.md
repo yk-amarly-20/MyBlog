@@ -17,11 +17,11 @@ tags: ["machine_learinig", "math"]
 
 ## 測度論とは？
 
-まず測度論についてざっと説明しておきます。測度論では名前の通り「測度」という概念について考えるのですが、この測度というのは、集合の大きさを測る「ものさし」を表します。例えば、集合として、![数式](https://latex.codecogs.com/gif.latex?\Omega&space;=&space;{1,&space;2,&space;3,&space;4,&space;5,&space;6})というものを考えます。
-この集合の大きさは、要素の個数である 6 とするのが妥当でしょう。ですが、![数式](https://latex.codecogs.com/gif.latex?I&space;=&space;[0,&space;1])という集合はどうでしょう？理系の一回生程度の授業で扱うと思いますが、0 から 1 の間の実数全体の集合の個数は非可算無限個であることが知られており、
+まず測度論についてざっと説明しておきます。測度論では名前の通り「測度」という概念について考えるのですが、この測度というのは、集合の大きさを測る「ものさし」を表します。例えば、集合として、<img src="https://latex.codecogs.com/gif.latex?\Omega&space;=&space;\{1,&space;2,&space;3,&space;4,&space;5,&space;6\}">というものを考えます。
+この集合の大きさは、要素の個数である 6 とするのが妥当でしょう。ですが、<img src="https://latex.codecogs.com/gif.latex?I&space;=&space;[0,&space;1]">という集合はどうでしょう？理系の一回生程度の授業で扱うと思いますが、0 から 1 の間の実数全体の集合の個数は非可算無限個であることが知られており、
 このように実数の区間の要素の個数はどの区間を用意しても無限個となり、集合の大きさとしては不適切となるのがわかると思います。なので、このような集合に対しては別の方法で「大きさ」を定めるわけですが、この「大きさ」の測り方を「測度」という関数で表します。(大きさを要素の個数とする、という測度も存在し、counting measure と呼びます)
 
-さて、上のようなある意味で「連続」な集合に対する測度の定め方ですが、例えば「面積」という考え方があります。例として、![数式](https://latex.codecogs.com/gif.latex?I^2&space;=&space;[0,&space;1]&space;*&space;[0,&space;1])という集合を考えます。  
+さて、上のようなある意味で「連続」な集合に対する測度の定め方ですが、例えば「面積」という考え方があります。例として、<img src="https://latex.codecogs.com/gif.latex?I^2&space;=&space;[0,&space;1]&space;*&space;[0,&space;1]">という集合を考えます。  
 これを x-y 平面上に描画すると、一辺の長さが 1 の正方形となります。そこで、このような 2 次元平面上の測度として、集合の面積を考えましょう。先ほどの![](https://latex.codecogs.com/gif.latex?I^2)については、測度を適用した値は 1 となります。  
 この 2 次元平面上の面積は測度の定義を満たすことが知られており、n 次元平面上の測度も同様に n 次元面積として定義できます。この意味での測度に「ちょっとした細工」を加えたものが、のちのルベーグ積分論で出てくる「ルベーグ測度」と呼ばれるものです。
 
@@ -29,10 +29,39 @@ tags: ["machine_learinig", "math"]
 
 では、次にルベーグ積分のことを考えようと思うのですが、その前に、高校でも習うリーマン積分について軽く復習しておきましょう。
 
-![](https://w3e.kanazawa-it.ac.jp/math/category/sekibun/image/riemann-sum.gif)
+<img src="https://w3e.kanazawa-it.ac.jp/math/category/sekibun/image/riemann-sum.gif">
 
-以下の図で、![](<https://latex.codecogs.com/gif.latex?\int_a^b&space;f(x)dx>)を計算したいとしましょう。曲線について積分したいときは、積分範囲を微小な区間で区切ってできた長方形部分(図の赤い部分)を足し合わせたものについて、微小区間の長さの 0 への極限を考えれば計算できます。  
-図の通りだと![](<https://latex.codecogs.com/gif.latex?f(x)>)は連続関数ですが、ある可算個の不連続点が存在しても、区間をその不連続点で区切り、最後に可算和を取れば同様に計算可能です。  
-ですが、不連続点が非可算無限個ある場合はどうしましょう？次の関数と区間を考えてみましょう。
+以下の図で、<img src="https://latex.codecogs.com/gif.latex?\int_a^b&space;f(x)dx">を計算したいとしましょう。曲線について積分したいときは、積分範囲を微小な区間で区切ってできた長方形部分(図の赤い部分)を足し合わせたものについて、微小区間の長さの 0 への極限を考えれば計算できます。  
+図の通りだと<img src="https://latex.codecogs.com/gif.latex?f(x)">は連続関数ですが、ある有限個の不連続点が存在しても、区間をその不連続点で区切り、最後に有限和を取れば同様に計算可能です。  
+ですが、不連続点が無限個ある場合はどうしましょう？次の関数と区間を考えてみましょう。
 
-![数式](<https://latex.codecogs.com/gif.latex?1_{\mathbb{Q}}(x)&space;=&space;\begin{cases}&space;1&space;\hspace{8mm}&space;(\rm{if}&space;\hspace{1mm}&space;x&space;\in&space;\mathbb{Q})&space;\&space;0&space;\hspace{8mm}&space;(\rm{if}&space;\hspace{1mm}&space;x&space;\notin&space;\mathbb{Q})&space;\end{cases}>)
+<img src="https://latex.codecogs.com/gif.latex?1_{\mathbb{Q}}(x)&space;=&space;\begin{cases}&space;1&space;\hspace{8mm}&space;(\rm{if}&space;\hspace{1mm}&space;x&space;\in&space;\mathbb{Q})&space;\\&space;0&space;\hspace{8mm}&space;(\rm{if}&space;\hspace{1mm}&space;x&space;\notin&space;\mathbb{Q})&space;\end{cases}">
+
+この関数の意味としては、<img src="https://latex.codecogs.com/gif.latex?x">が有理数の時は 1, 無理数のときは 0 をとるような関数ですね。(<img src="https://latex.codecogs.com/gif.latex?\mathbb{Q}">は有理数全体の集合です)  
+<img src="https://latex.codecogs.com/gif.latex?I">上には有理数点は可算無限個存在することが知られています。また、この<img src="https://latex.codecogs.com/gif.latex?1_{\mathbb{Q}}(x)">を連続関数の時と同様、長方形近似の極限として考えます。この時、有理数と無理数は稠密に敷き詰められているという事実から、この極限値は存在せず、リーマン積分はできないことがわかります。
+
+これはリーマン積分できない関数のたった一例ですが、このような関数の積分を考えるためにルベーグ積分というものを導入します。  
+リーマン積分では積分範囲を十分小さく分割して、それを横の長さとするような長方形の面積として考えました。ルベーグ積分では、先ほど軽く述べたルベーグ測度で積分範囲を小さい集合に分割してそれぞれの「大きさ」を測り、それに各集合上での関数の値をかけたものを足し合わせます。ここで、以下のような気持ち悪い関数を考えます。
+
+![irregular_sin](/Images/measure_theory/irregular_sin.png)
+
+これは、sinx 上の点のうち、二つの点をランダムに変更した関数です。この関数をルベーグ積分しようと思った時、二つの非連続点は面積に関係しない(面積としての重みがない、とも言える)ため、普通に sinx を積分するのと変わらない、と言えます。このことを測度論の世界では以下のように表現します。
+
+<img src="https://latex.codecogs.com/gif.latex?f(x)&space;=&space;\sin&space;(x)&space;\&space;\&space;\&space;\&space;\mathrm{almost&space;\&space;everywhere">
+
+この almost everywhere という考え方はルベーグ積分論ではとても重要で、今回のようにある積分しやすい関数 f と気持ち悪い関数 g が存在して g を積分したいと思った時、f と g が<img src="https://latex.codecogs.com/gif.latex?f(x)&space;=&space;g(x)&space;\&space;\&space;\&space;\&space;\mathrm{almost&space;\&space;everywhere}">
+という関係を満たす時、f を積分すればよい、ということになります。  
+(ちなみに、先ほどの気持ち悪い sinx の不連続点のように、「重み」を持たない集合のことを(測度 μ で測っても 0 という意味で)μ-0 集合とか言ったりします)
+
+さて、先の不連続点が無限個あるような関数の積分を再び考えてみましょう。  
+実は、ルベーグ測度 μ について、有理数全体の集合 Q は、μ-0 集合ということが知られています。つまり、
+<img src="https://latex.codecogs.com/gif.latex?1_\mathbb{Q}(x)&space;=&space;0&space;\&space;\&space;\&space;\&space;\mathrm{almost&space;\&space;everywhere}">
+が成り立っているため、
+<img src="https://latex.codecogs.com/gif.latex?\int_0^{1}&space;1_\mathbb{Q}&space;\&space;d\mu&space;=&space;\int_0^1&space;0&space;\&space;d\mu&space;=&space;0">
+となるわけです。  
+この関数はリーマン積分は出来ないので、ルベーグ積分ではリーマン積分よりも積分できる関数が多いわけです。
+
+## 終わりに
+
+今回は測度論、及びルベーグ積分論の有用性について書きました。最後にルベーグ積分できる関数はリーマン積分より多いと書きましたが、これによる利点がまだまだあります。  
+ですがそれはまた追々...。
