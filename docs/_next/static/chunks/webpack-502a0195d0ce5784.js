@@ -63,7 +63,7 @@
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (t.p = "/_next/"),
+    (t.p = "./_next/"),
     (() => {
       var e = { 68: 0 };
       t.O.j = r => 0 === e[r];
