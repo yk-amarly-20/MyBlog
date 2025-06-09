@@ -10,20 +10,18 @@ const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
 
-const repoName = "YOUR_REPO_NAME"; // ← 実際のリポジトリ名に置き換えてください
+const repoName = "YOUR_REPO_NAME"; // ← GitHub リポジトリ名に置き換え
 
 module.exports = withMDX({
-  // Next.js を静的エクスポートモードに
+  // 完全静的エクスポートモード
   output: "export",
 
-  // GitHub Pages は /<repo>/ 以下にホストされるので、
-  // HTML のリンク先やアセット読み込みにプレフィックスをつける
-  assetPrefix: `/${repoName}/`,
+  // ページ URL とアセット読み込みのプレフィックス
   basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
 
-  // URL の末尾にスラッシュを付けて出力（GitHub Pages との相性が良い）
+  // out/<page>/index.html 形式で出力
   trailingSlash: true,
 
-  // もともとの拡張子設定はそのまま
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 });
