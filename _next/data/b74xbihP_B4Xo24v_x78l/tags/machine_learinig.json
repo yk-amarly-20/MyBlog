@@ -1,0 +1,45 @@
+{
+  "pageProps": {
+    "tagName": "machine_learinig",
+    "articles": [
+      {
+        "slug": "measure_theory",
+        "matter": {
+          "title": "機械学習のための測度論/ルベーグ積分論(1)",
+          "createdAt": "2021-05-16T1634:53.325Z",
+          "tags": ["machine_learinig", "math"]
+        },
+        "excerpt": "なぜ測度論/ルベーグ積分論を学ぶのか 測度論は集合の大きさの「測り方」を考えるもの、ルベーグ積分論は、測度を用いた新たな積分を定義するものです。 大学の数学科に進むと必ず触れることになる分野で、函数解析学や確率論などに繋がるものとなっています。 機械学習の分野でも、測度論的確率論の視点から俯瞰することがトレンドになった..."
+      },
+      {
+        "slug": "darts_practice_1",
+        "matter": {
+          "title": "時系列解析(1)",
+          "createdAt": "2020-12-14T1634:53.325Z",
+          "tags": ["python", "time_series_analysis", "machine_learinig"]
+        },
+        "excerpt": "はじめに 大学では数学系として確率論を専攻する中で時系列解析について勉強したりするんですが、 それ関連でついこの間 python の時系列解析ライブラリであるdartsというものを 発見したので、触ってみました。 依存ライブラリのバージョン(pandas のバージョンが 1.1.0 だったり...)とかちょこちょこ問題..."
+      }
+    ],
+    "tags": [
+      { "name": "python", "count": 4 },
+      { "name": "time_series_analysis", "count": 1 },
+      { "name": "machine_learinig", "count": 2 },
+      { "name": "DDD", "count": 4 },
+      { "name": "Kotlin", "count": 5 },
+      { "name": "AI", "count": 1 },
+      { "name": "Devin", "count": 1 },
+      { "name": "Ktor", "count": 1 },
+      { "name": "math", "count": 1 },
+      { "name": "backend", "count": 1 },
+      { "name": "typescript", "count": 3 },
+      { "name": "ampqlib", "count": 1 },
+      { "name": "React", "count": 2 },
+      { "name": "matplotlib", "count": 1 },
+      { "name": "AWS", "count": 1 },
+      { "name": "Node.js", "count": 1 },
+      { "name": "statistic", "count": 1 }
+    ]
+  },
+  "__N_SSG": true
+}

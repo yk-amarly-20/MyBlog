@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "tagName": "Node.js",
+    "articles": [
+      {
+        "slug": "serverless",
+        "matter": {
+          "title": "Serverless Framework入門",
+          "createdAt": "2021-03-01T16:09:43.525Z",
+          "tags": ["AWS", "Node.js"],
+          "imageUrl": "/Images/serverless/serverless.png"
+        },
+        "excerpt": "サーバーレスとは サーバー\"レス\"っていうくらいですから、サーバーがなくてもアプリケーションを実行できる魔法の様な環境だと思いがちですが、 そんな物はありません。サーバーレスというのは、アプリケーション開発、運用側でサーバーの構築を行わなくても構築、保守は 提供元企業が全て行ってくれる、という仕組みです。運用側は一切サ..."
+      }
+    ],
+    "tags": [
+      { "name": "python", "count": 4 },
+      { "name": "time_series_analysis", "count": 1 },
+      { "name": "machine_learinig", "count": 2 },
+      { "name": "DDD", "count": 4 },
+      { "name": "Kotlin", "count": 5 },
+      { "name": "AI", "count": 1 },
+      { "name": "Devin", "count": 1 },
+      { "name": "Ktor", "count": 1 },
+      { "name": "math", "count": 1 },
+      { "name": "backend", "count": 1 },
+      { "name": "typescript", "count": 3 },
+      { "name": "ampqlib", "count": 1 },
+      { "name": "React", "count": 2 },
+      { "name": "matplotlib", "count": 1 },
+      { "name": "AWS", "count": 1 },
+      { "name": "Node.js", "count": 1 },
+      { "name": "statistic", "count": 1 }
+    ]
+  },
+  "__N_SSG": true
+}

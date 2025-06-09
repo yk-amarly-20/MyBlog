@@ -1,0 +1,18 @@
+{
+  "pageProps": {
+    "article": {
+      "header": {
+        "slug": "ktor_test",
+        "matter": {
+          "title": "Ktorでテスト書く",
+          "createdAt": "2021-07-19T0001:54.325Z",
+          "tags": ["Kotlin", "Ktor"]
+        },
+        "excerpt": "Ktor とは 最近業務で Ktor 使ってて、割とハマってる民です。Ktor は Kotlin 向けの Web サーバーサイドフレームワークで、サーバーサイド Kotlin のフレームワークとしては他に Spring boot が有名ですね。 Ktor は Spring boot に比べて軽量で、カスタマイズがしやす..."
+      },
+      "bodyMdText": "\n## Ktor とは\n\n最近業務で Ktor 使ってて、割とハマってる民です。Ktor は Kotlin 向けの Web サーバーサイドフレームワークで、サーバーサイド Kotlin のフレームワークとしては他に Spring boot が有名ですね。  \nKtor は Spring boot に比べて軽量で、カスタマイズがしやすいのが特徴です。Spring はアノテーションでいろいろよしなにやってくれるのがいいんですけど、僕は個人的にはプラモデル作ってる感覚になってあんま好きじゃないです(Ktor はレゴブロックみたいな感じ、~~伝われ~~)。  \nただ Ktor はドキュメントが結構貧弱なのが弱点で、ググってもあんまり欲しい情報が出てこない時しばしばあります。今回は、そんな Ktor のテストの書き方について備忘録的に残しとこうと思います。\n\n## とりあえずみてみる\n\nエンドポイントはこんな感じで。\n\n```kotlin\n\npackage com.example.app\n\nimport io.ktor.application.Application\nimport io.ktor.application.call\nimport io.ktor.response.respondText\nimport io.ktor.routing.get\nimport io.ktor.routing.routing\n\nfun Application.sample() {\n    routing {\n        get(\"/\") {\n            call.respondText(\"Hello!!\")\n        }\n    }\n}\n```\n\nまあかなり簡単な api ですが、get で Hello という文字列を返すようなエンドポイントです。\nこのテストケースは例えばこう書きます。\n\n```kotlin\npackage test\n\nimport io.ktor.application.Application\nimport io.ktor.http.HttpMethod\nimport io.ktor.http.HttpStatusCode\nimport io.ktor.server.testing.handleRequest\nimport io.ktor.server.testing.withTestApplication\nimport org.junit.Test\nimport kotlin.test.assertEquals\n\nclass SampleTestCase {\n    @Test\n    fun testRoot() = withTestApplication(Application::sample) {\n        handleRequest(HttpMethod.Get, \"/\").run {\n            assertEquals(\"Hello\", response.content)\n        }\n    }\n}\n```\n\nこんな感じ。まあみたら大体わかると思います(雑)。今後 post のテストケースや細かい説明を追加していこうと思います。\n",
+      "tocMdText": "- [Ktor とは](#ktor-%E3%81%A8%E3%81%AF)\n- [とりあえずみてみる](#%E3%81%A8%E3%82%8A%E3%81%82%E3%81%88%E3%81%9A%E3%81%BF%E3%81%A6%E3%81%BF%E3%82%8B)"
+    }
+  },
+  "__N_SSG": true
+}

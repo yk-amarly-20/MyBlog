@@ -1,0 +1,72 @@
+{
+  "pageProps": {
+    "tagName": "Kotlin",
+    "articles": [
+      {
+        "slug": "ddd_4",
+        "matter": {
+          "title": "DDDについて（3）",
+          "createdAt": "2021-10-25T0001:54.325Z",
+          "tags": ["DDD", "Kotlin"]
+        },
+        "excerpt": "1\\. Repository が担う責務と目的 1.1 なぜ Repository が必要なのか？ DDD において、Repository（リポジトリ） は、「アグリゲートルート（主に Entity）を永続化層（DB・外部サービスなど）から取得・保存するためのインターフェース」 です。以下のような意図・メリットがありま..."
+      },
+      {
+        "slug": "ddd_3",
+        "matter": {
+          "title": "DDDについて（3）",
+          "createdAt": "2021-10-20T0001:54.325Z",
+          "tags": ["DDD", "Kotlin"]
+        },
+        "excerpt": "1\\. Entity について 1.1 基本的な定義 Entity は、ドメインにおいて「識別可能（Identity） なオブジェクト」です。 重要なのは「ID を持ち、同じ ID であれば属性が変わっても同じ存在だとみなす」点です。 さらに、エンティティは ドメインの振る舞いを持つ リッチモデルとして実装されることが..."
+      },
+      {
+        "slug": "ddd_2",
+        "matter": {
+          "title": "DDDについて（2）",
+          "createdAt": "2021-10-12T0001:54.325Z",
+          "tags": ["DDD", "Kotlin"]
+        },
+        "excerpt": "1\\. ValueObject について 1.1 基本的な定義 識別子を持たない 例えば「住所(Address)」や「金額(Money)」といったドメイン概念の場合、同じ属性の組み合わせであれば同一の値オブジェクトとみなせます。 そのため、id: String のような一意な識別子フィールドは基本的に不要です。 不変性..."
+      },
+      {
+        "slug": "ddd_1",
+        "matter": {
+          "title": "DDDについて（１）",
+          "createdAt": "2021-10-10T0001:54.325Z",
+          "tags": ["DDD", "Kotlin"]
+        },
+        "excerpt": "0\\. 近況 今回から DDD の記事を書いていこうかと思います。 というのも、数ヶ月前から最近内定した企業様の方で内定者インターンを始めさせていただいたのですが、弊チームでは BE の設計手法として DDD（ドメイン駆動設計）を採用しており、所属する少し前から勉強を始めました。 実践的なタスクもこなし、最近既存の設計..."
+      },
+      {
+        "slug": "ktor_test",
+        "matter": {
+          "title": "Ktorでテスト書く",
+          "createdAt": "2021-07-19T0001:54.325Z",
+          "tags": ["Kotlin", "Ktor"]
+        },
+        "excerpt": "Ktor とは 最近業務で Ktor 使ってて、割とハマってる民です。Ktor は Kotlin 向けの Web サーバーサイドフレームワークで、サーバーサイド Kotlin のフレームワークとしては他に Spring boot が有名ですね。 Ktor は Spring boot に比べて軽量で、カスタマイズがしやす..."
+      }
+    ],
+    "tags": [
+      { "name": "python", "count": 4 },
+      { "name": "time_series_analysis", "count": 1 },
+      { "name": "machine_learinig", "count": 2 },
+      { "name": "DDD", "count": 4 },
+      { "name": "Kotlin", "count": 5 },
+      { "name": "AI", "count": 1 },
+      { "name": "Devin", "count": 1 },
+      { "name": "Ktor", "count": 1 },
+      { "name": "math", "count": 1 },
+      { "name": "backend", "count": 1 },
+      { "name": "typescript", "count": 3 },
+      { "name": "ampqlib", "count": 1 },
+      { "name": "React", "count": 2 },
+      { "name": "matplotlib", "count": 1 },
+      { "name": "AWS", "count": 1 },
+      { "name": "Node.js", "count": 1 },
+      { "name": "statistic", "count": 1 }
+    ]
+  },
+  "__N_SSG": true
+}
