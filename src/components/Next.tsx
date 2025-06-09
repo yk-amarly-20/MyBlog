@@ -9,7 +9,7 @@ type Props = {
 
 export const Next: React.VFC<Props> = ({ article }) => {
   return (
-    <Link href={`/articles/${article.slug}`}>
+    <Link href={`/articles/${article.slug}`} legacyBehavior>
       <a className={style.root}>
         <div className={style.iconWrapper}>
           <ArrowAltCircleLeftIcon className={style.icon} />

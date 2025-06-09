@@ -11,7 +11,7 @@ export const AboutMe: React.FC = () => {
       <SideMenuTitle icon={<LeafIcon className={style.icon} />}>About Me</SideMenuTitle>
       <div className={style.wrapper}>
         <div className={style.aboutme}>
-          <img src="/Images/Yuto.jpg" className={style.avatar} alt="avatar" />
+          <img src="/MyBlog/Images/Yuto.jpg" className={style.avatar} alt="avatar" />
           <div className={style.biography}>
             <p>コジコジ</p>
             <p>ソフトウェアエンジニア</p>

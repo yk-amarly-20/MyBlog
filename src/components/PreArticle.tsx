@@ -9,7 +9,7 @@ type Props = {
 
 export const PreArticle: React.VFC<Props> = ({ article }) => {
   return (
-    <Link href={`/articles/${article.slug}`}>
+    <Link href={`/articles/${article.slug}`} legacyBehavior>
       <a className={style.root}>
         <div className={style.titleContainer}>
           <div className={style.title}>{article.matter.title}</div>

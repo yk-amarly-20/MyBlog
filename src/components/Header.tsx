@@ -6,9 +6,9 @@ export const Header: React.VFC = props => {
   return (
     <header className={style.header}>
       <AppContainer className={style.container}>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a>
-            <img className={style.logo} src="../Images/logo.png" alt="logo" />
+            <img className={style.logo} src="/MyBlog/Images/logo.png" alt="logo" />
           </a>
         </Link>
       </AppContainer>
