@@ -10,14 +10,14 @@ type Props = {
 };
 
 export const ArticleItem: React.VFC<Props> = ({ article }) => {
-  const imageUrl = article.matter.imageUrl ?? "/Images/noImage.png";
+  const imageUrl = article.matter.imageUrl ?? "/MyBlog/Images/noImage.png";
 
   return (
     <div className={style.root}>
       <img className={style.image} src={imageUrl} alt="article catch" />
       <div className={style.info}>
         <h2 className={style.title}>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={`/articles/${article.slug}`} legacyBehavior>
             <a className={style.titleLink}>{article.matter.title}</a>
           </Link>
         </h2>

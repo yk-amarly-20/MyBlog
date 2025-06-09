@@ -17,7 +17,7 @@ export const TagLinks: React.VFC<Props> = props => {
       </div>
       <div className={style.links}>
         {props.tags.map((tag, index) => (
-          <Link key={index} href={`/tags/${tag.name}`}>
+          <Link key={index} href={`/tags/${tag.name}`} legacyBehavior>
             <a className={style.tagLink}>
               <p>
                 <span className={style.tagName}>{encodeURI(tag.name)}</span>
