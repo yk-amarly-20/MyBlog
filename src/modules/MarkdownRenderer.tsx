@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkSlug from "remark-slug";
 import remarkGfm from "remark-gfm";
-import { Prism } from "react-syntax-highlighter";
+import { Prism as ReactSyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark as prismStyle } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import style from "../styles/MarkdownRenderer.module.css";
 import { ExternalLink } from "../link/ExternalLink";
@@ -19,7 +19,8 @@ export const MarkdownRenderer: React.VFC<Props> = ({ children }) => {
           link: Link,
           heading: Heading,
           code: Code,
-        }}>
+        }}
+      >
         {children}
       </ReactMarkdown>
     </div>
@@ -61,10 +62,12 @@ type CodeProps = {
   value: string;
 };
 
+const SyntaxHighlighter = ReactSyntaxHighlighter as unknown as React.FC<any>;
+
 const Code: React.VFC<CodeProps> = props => {
   return (
-    <Prism language={props.language ?? undefined} style={prismStyle}>
+    <SyntaxHighlighter language={props.language ?? undefined} style={prismStyle}>
       {props.value}
-    </Prism>
+    </SyntaxHighlighter>
   );
 };
