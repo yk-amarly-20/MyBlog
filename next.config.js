@@ -2,7 +2,7 @@
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
-const repoName = "YOUR_REPO_NAME";
+const repoName = "MyBlog";
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = withMDX({
