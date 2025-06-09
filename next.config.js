@@ -9,7 +9,8 @@ module.exports = withMDX({
   output: "export",
   trailingSlash: true,
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-
+  basePath: "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "./" : "",
   // next/image を使っているなら
   images: {
     unoptimized: true,
