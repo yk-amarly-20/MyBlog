@@ -8,7 +8,8 @@
     "start": "next start -p $PORT",
     "create": "node scripts/create.js",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "deploy": "npm run build && gh-pages -d out"
+    "predeploy": "rm -rf docs && cp -r out docs",
+    "deploy": "npm run build && gh-pages -d docs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

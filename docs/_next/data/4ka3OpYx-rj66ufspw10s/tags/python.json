@@ -1,0 +1,63 @@
+{
+  "pageProps": {
+    "tagName": "python",
+    "articles": [
+      {
+        "slug": "python_atcoder",
+        "matter": {
+          "title": "pythonでAtCoderの入出力チートシート",
+          "createdAt": "2021-07-17T2334:54.325Z",
+          "tags": ["python"]
+        },
+        "excerpt": "python で atcoder の入出力をするやつ AtCoder という文字列を久しぶりに打ってタイポしたくらいには最近 AtCoder に触れてない自分ですが、最近バイト先の後輩が Python と AtCoder 始めて 応援してます。そういうわけで、入出力操作をここに残しておこうかと。 \\~~Pyhton 書..."
+      },
+      {
+        "slug": "plt_white_circle",
+        "matter": {
+          "title": "matplotlibで白抜き丸をプロットする",
+          "createdAt": "2021-06-26T1634:54.325Z",
+          "tags": ["python", "matplotlib"]
+        },
+        "excerpt": "plt.scatter で白抜き丸をプロットしたい... python の plt.scatter で、散布図を描くことが出来ます。 上を実行すると、次の画像が生成されます。 black_scatter これはこれでいいのですが、この丸を白抜きの丸にしてプロットしたいと考えた時があったので、備忘録として。 結論として、..."
+      },
+      {
+        "slug": "darts_practice_1",
+        "matter": {
+          "title": "時系列解析(1)",
+          "createdAt": "2020-12-14T1634:53.325Z",
+          "tags": ["python", "time_series_analysis", "machine_learinig"]
+        },
+        "excerpt": "はじめに 大学では数学系として確率論を専攻する中で時系列解析について勉強したりするんですが、 それ関連でついこの間 python の時系列解析ライブラリであるdartsというものを 発見したので、触ってみました。 依存ライブラリのバージョン(pandas のバージョンが 1.1.0 だったり...)とかちょこちょこ問題..."
+      },
+      {
+        "slug": "topological_data_analysis",
+        "matter": {
+          "title": "Topological Data Analysis入門",
+          "createdAt": "2019-07-15T12:13:43.525Z",
+          "tags": ["python", "statistic"]
+        },
+        "excerpt": "はじめに こんにちは、今回は最近たまたま知って論文読んでた Topological Data Analysis について書こうと思います。数学的なところはだいぶはしょって書きます（めんどくさい）。備忘録的なやつです、間違ってるところあったらごめんなさい。 TDA とは TDA は、幾何学的な観点からデータの解析を行う手..."
+      }
+    ],
+    "tags": [
+      { "name": "python", "count": 4 },
+      { "name": "time_series_analysis", "count": 1 },
+      { "name": "machine_learinig", "count": 2 },
+      { "name": "DDD", "count": 4 },
+      { "name": "Kotlin", "count": 5 },
+      { "name": "AI", "count": 1 },
+      { "name": "Devin", "count": 1 },
+      { "name": "Ktor", "count": 1 },
+      { "name": "math", "count": 1 },
+      { "name": "backend", "count": 1 },
+      { "name": "typescript", "count": 3 },
+      { "name": "ampqlib", "count": 1 },
+      { "name": "React", "count": 2 },
+      { "name": "matplotlib", "count": 1 },
+      { "name": "AWS", "count": 1 },
+      { "name": "Node.js", "count": 1 },
+      { "name": "statistic", "count": 1 }
+    ]
+  },
+  "__N_SSG": true
+}

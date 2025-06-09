@@ -1,0 +1,19 @@
+{
+  "pageProps": {
+    "article": {
+      "header": {
+        "slug": "serverless",
+        "matter": {
+          "title": "Serverless Framework入門",
+          "createdAt": "2021-03-01T16:09:43.525Z",
+          "tags": ["AWS", "Node.js"],
+          "imageUrl": "/Images/serverless/serverless.png"
+        },
+        "excerpt": "サーバーレスとは サーバー\"レス\"っていうくらいですから、サーバーがなくてもアプリケーションを実行できる魔法の様な環境だと思いがちですが、 そんな物はありません。サーバーレスというのは、アプリケーション開発、運用側でサーバーの構築を行わなくても構築、保守は 提供元企業が全て行ってくれる、という仕組みです。運用側は一切サ..."
+      },
+      "bodyMdText": "\n## サーバーレスとは\n\nサーバー\"レス\"っていうくらいですから、サーバーがなくてもアプリケーションを実行できる魔法の様な環境だと思いがちですが、\nそんな物はありません。サーバーレスというのは、アプリケーション開発、運用側でサーバーの構築を行わなくても構築、保守は\n提供元企業が全て行ってくれる、という仕組みです。運用側は一切サーバ構築、保守を行わなくてもよい、ということからサーバーレスと\n呼ばれています。サーバーレスでは、AWS Lambda がかなり有名ですね。多くの企業がこういったサーバーレスを利用して自社アプリケーションの運用、開発などを行っていますが、\n社内でのプロダクト、従業員が増えると用いる Lambda も増え、その管理が難しくなってきます。そういった際に便利なのがタイトルにもある\"Serverless Framework\"です。\n\n## Serverless Framework\n\nServerless Framework(以下 Serverless)とは、サーバーレスなアプリケーションの開発を楽に開発するためのツールであり、node でインストールできます。\nクラウドによらず利用することができ、言語もいくつか選択肢があります。\nServerless の、僕が思う最も大きな利点は「インフラをコードにまとめておけること」です。  \nServerless では Lambda をデプロイする際、yml ファイルに設定を書くのですが、この設定ファイルを利用することで、インフラの再利用性が上がります。AWS CLI の様に何度もデプロイ用の\nスクリプトを書く必要性が減り、設定ファイルの記述量も少ないです。\n\nでは、Serverless の[チュートリアル](https://www.serverless.com/framework/docs/providers/aws/examples/hello-world/node/)をなぞって実装してみましょう。  \n今回は Node.js を用いたチュートリアルを進めます。\n\n### 準備(install, AWS 周り)\n\n上でも述べた通り、Serverless は node 製のツールなので、node からインストールできます。\n\n```shell\nnode install -g serverless\n```\n\n今回はクラウドサービスとして AWS Lambda を用いるので、AWS の IAM ユーザーを作成しておきましょう。  \n管理ポリシーは「プログラムによるアクセス」及び\"AdministratorAccess\"を選んでください。\n\n作成したら、アクセスキー、シークレットアクセスキーを取得して、serverless の config に設定します。\n\n```shell\nsls config credentials --provider aws --key アクセスキー --secret シークレットアクセスキー\n```\n\nこれで大まかな準備は終わりです。\n\n### Lambda の作成、デプロイ\n\nではいよいよ Lambda を作成して AWS Lambda にデプロイします。以下のコマンドを実行すると、Lambda Function の定義ファイルが作成されます。\n\n```shell\nsls create --template aws-nodejs --name myService --path myService\n```\n\nすると、作業ディレクトリが作成され、中に\"handler.js\"、\"serverless.yml\"が作成されたかと思います。  \nhandler.js が Lambda Function の実装、serverless.yml が Serverless の設定ファイルです。 ではこれをデプロイしてみます。\n\n```shell\nsls deploy\n```\n\nコンソールを見ると、Lambda が作成されていると思います。\nこの様にデプロイが非常に簡単なのも Serverless の利点です。\n\n## References\n\n1. チュートリアル https://www.serverless.com/framework/docs/providers/aws/examples/hello-world/node/\n",
+      "tocMdText": "- [サーバーレスとは](#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9%E3%81%A8%E3%81%AF)\n- [Serverless Framework](#serverless-framework)\n  * [準備(install, AWS 周り)](#%E6%BA%96%E5%82%99install-aws-%E5%91%A8%E3%82%8A)\n  * [Lambda の作成、デプロイ](#lambda-%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4)\n- [References](#references)"
+    }
+  },
+  "__N_SSG": true
+}
