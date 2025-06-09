@@ -10,7 +10,7 @@ const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
 
-const repoName = "MyBlog";
+const repoName = "YOUR_REPO_NAME"; // ← GitHub リポジトリ名に置き換え
 
 module.exports = withMDX({
   // 完全静的エクスポートモード
