@@ -1,6 +1,6 @@
 // next.config.js
 const withMDX = require("@next/mdx")({ extension: /\.mdx?$/ });
-const repoName = "MyBlog";
+const repoName = "myblog";
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = withMDX({
