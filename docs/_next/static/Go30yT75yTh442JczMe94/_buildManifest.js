@@ -1,12 +1,6 @@
 (self.__BUILD_MANIFEST = (function (s, e, a, t, c) {
   return {
-    __rewrites: {
-      afterFiles: [],
-      beforeFiles: [
-        { has: void 0, source: "/.//_next/:path+", destination: "/_next/:path+" },
-      ],
-      fallback: [],
-    },
+    __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: {
       numItems: 0,
       errorRate: 1e-4,
