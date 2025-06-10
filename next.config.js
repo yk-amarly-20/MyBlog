@@ -1,6 +1,6 @@
 // next.config.js
 const withMDX = require("@next/mdx")({ extension: /\.mdx?$/ });
-const repoName = "myblog";
+const repoName = "MyBlog";
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = withMDX({
@@ -8,11 +8,8 @@ module.exports = withMDX({
   trailingSlash: true,
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 
-  // 本番ビルド（= docs にコピーする out の生成）時だけ
   basePath: isProd ? `/${repoName}` : "",
   assetPrefix: isProd ? `/${repoName}` : "",
-
-  // next/image を使っているなら…
   images: {
     unoptimized: true,
     loader: "akamai",
