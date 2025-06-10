@@ -808,7 +808,7 @@
         });
       let n = r(43563);
       function o(e) {
-        return (0, n.pathHasPrefix)(e, "/MyBlog");
+        return (0, n.pathHasPrefix)(e, "/myblog");
       }
       ("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -1186,7 +1186,7 @@
                         value: {
                           deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
                           imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                          path: "/MyBlog/_next/image/",
+                          path: "/myblog/_next/image/",
                           loader: "akamai",
                           dangerouslyAllowSVG: !1,
                           unoptimized: !0,
@@ -1712,7 +1712,7 @@
       let n = r(95214),
         o = r(87810);
       function a(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, "/MyBlog"));
+        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, "/myblog"));
       }
       ("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -5346,7 +5346,7 @@
             (this.pageLoader = o);
           let R = (0, p.isDynamicRoute)(e) && self.__NEXT_DATA__.autoExport;
           if (
-            ((this.basePath = "/MyBlog"),
+            ((this.basePath = "/myblog"),
             (this.sub = c),
             (this.clc = null),
             (this._wrapApp = l),
@@ -5840,7 +5840,7 @@
           },
         }),
         r(10866);
-      let n = "/MyBlog";
+      let n = "/myblog";
       function o(e) {
         return (
           0 === n.length || (e = e.slice(n.length)).startsWith("/") || (e = "/" + e), e
