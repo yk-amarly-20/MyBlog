@@ -8,8 +8,10 @@
     "start": "next start -p $PORT",
     "create": "node scripts/create.js",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "predeploy": "rm -rf docs && cp -r out docs",
-    "deploy": "npm run build && gh-pages -d docs"
+    "predeploy": "rm -rf docs && mkdir -p docs/myblog && cp -r out/* docs/myblog",
+    "predeployWithoutBlog": "rm -rf docs && mkdir -p docs && cp -r out/* docs",
+    "deploy": "npm run build && npm run predeploy && git add docs next.config.js && git commit -m \"Deploy\" && git push",
+    "deployWithoutBlog": "rm -rf out && npm run build && npm run predeployWithoutBlog && git add docs next.config.js && git commit -m \"Deploy\" && git push"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
